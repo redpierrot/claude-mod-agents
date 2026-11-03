@@ -1,10 +1,21 @@
-# agents (Claude Code mod)
+# 🦀 agents — a subagent pane for Claude Code
 
-A docked "Agents" pane for Claude Code: one block per subagent, newest first (last 100, scrollable).
+A docked **Agents** pane for [Claude Code](https://claude.com/claude-code). See every subagent your session spawns at a glance: what it is doing, how much context it has used, and how long it has been running, without scrolling through the transcript.
 
-Per agent: status mark (running, done, failed), a crab costume per agent type, type name, label, model and effort, a context bar, output tokens, requests, tool calls, elapsed time, and the latest tool call while it runs. When the pane is not showing, one row per running agent appears above the prompt instead.
+![Agents pane next to a Claude Code session](docs/images/pane-full.png)
 
-It opens by itself when the first subagent starts. `/agents-pane` toggles it.
+## Features
+
+- **Live status per agent**: running (●), done (✓) or failed (✗), newest first, last 100, scrollable.
+- **A crab costume per agent type**: 🧭 Explore, 📐 Plan, 🔧 general-purpose, 🔬 review, 🔒 security, 🧪 test, 📖 docs, 🎨 design, 🍴 fork. Anything else wears the plain 🦀.
+- **Everything that matters on two lines**: type, label, model and effort, a context bar with used/window size, output tokens, requests, tool calls and elapsed time.
+- **Latest tool call** shown while the agent runs, such as `↳ Bash run the tests`.
+- **Opens by itself** when the first subagent starts. `/agents-pane` toggles it.
+- **Transcript viewer**: jump into any subagent's transcript from the pane and back again (see below).
+- **Fallback rows**: when the pane is closed or the terminal is too narrow, one row per running agent appears above the prompt instead.
+- **Private by design**: no network, no files, no processes. See [Privacy and security](#privacy-and-security).
+
+![Close-up of the agent rows](docs/images/pane-closeup.png)
 
 ## View a subagent's transcript
 
