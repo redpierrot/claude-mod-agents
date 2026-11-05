@@ -1,4 +1,4 @@
-# 🦀 agents — a subagent pane for Claude Code
+# 🦀 agent-crabs — a subagent pane for Claude Code
 
 A docked **Agents** pane for [Claude Code](https://claude.com/claude-code). See every subagent your session spawns at a glance: what it is doing, how much context it has used, and how long it has been running, without scrolling through the transcript.
 
@@ -29,21 +29,25 @@ Limits: Claude Code only lets a mod switch the view while it answers your own in
 
 ## Option
 
-`rows` (`/config`, or `pluginConfigs.agents.options.rows`): `auto` (default) draws the rows above the prompt only while the pane is not showing, `off` never, `always` also while the pane is open.
+`rows` (`/config`, or `pluginConfigs.agent-crabs.options.rows`): `auto` (default) draws the rows above the prompt only while the pane is not showing, `off` never, `always` also while the pane is open.
 
 ## Install
+
+Requires Claude Code 2.1.300 or later, in a terminal session.
 
 In a Claude Code session:
 
 ```
-/plugin install agents --marketplace redpierrot/claude-mod-agents
+/plugin install agent-crabs --marketplace redpierrot/claude-mod-agents
 ```
 
 Answer `y` to add the marketplace, then pick a scope. From a shell:
 
 ```sh
-claude plugin install agents --marketplace redpierrot/claude-mod-agents
+claude plugin install agent-crabs --marketplace redpierrot/claude-mod-agents
 ```
+
+If the pane does not appear, run `/reload-plugins`, and check that `/plugin` lists `agent-crabs` as enabled. After an update, run `/reload-plugins` again.
 
 To try it from a checkout instead:
 

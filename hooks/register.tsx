@@ -8,10 +8,10 @@ const PANE = 'agents'
 const COMMAND = 'agents-pane'
 const MAX_AGENTS = 100
 
-const list = atom({ plugin: 'agents', key: 'list' } as const, [])
-const now = atom({ plugin: 'agents', key: 'now' } as const, 0)
+const list = atom({ plugin: 'agent-crabs', key: 'list' } as const, [])
+const now = atom({ plugin: 'agent-crabs', key: 'now' } as const, 0)
 // Bumped when the pane opens or closes, so the rows above the prompt redraw and re-check whether the pane is showing.
-const paneTick = atom({ plugin: 'agents', key: 'paneTick' } as const, 0)
+const paneTick = atom({ plugin: 'agent-crabs', key: 'paneTick' } as const, 0)
 
 const RED = '#e66767'
 const GREEN = '#199e70'
@@ -143,7 +143,7 @@ export const register: Register = (on, options) => {
 
     return { text: isOpen
         ? 'Agents pane closed.'
-        : 'Agents pane opened. Rows above the prompt hide while it shows; if the pane is covered (e.g. by the diff panel), set the agents option rows to always.' }
+        : 'Agents pane opened. Rows above the prompt hide while it shows; if the pane is covered (e.g. by the diff panel), set the `rows` option to always.' }
   })
 
   // The rows above the prompt depend on whether the pane is showing, so a change of its seat redraws them.

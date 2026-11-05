@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" fill="#14213D"/>
+  <!-- legs -->
+  <g stroke="#E4572E" stroke-width="44" stroke-linecap="round" fill="none">
+    <path d="M300 640 L170 700 L120 800"/>
+    <path d="M330 720 L230 820 L210 920"/>
+    <path d="M724 640 L854 700 L904 800"/>
+    <path d="M694 720 L794 820 L814 920"/>
+    <!-- arms -->
+    <path d="M330 500 L250 400 L230 320"/>
+    <path d="M694 500 L774 400 L794 320"/>
+  </g>
+  <!-- claws -->
+  <g fill="#E4572E">
+    <path d="M150 330 C110 210 220 130 290 190 C320 215 300 260 262 262 C290 300 270 360 220 366 C190 370 160 355 150 330Z"/>
+    <path d="M874 330 C914 210 804 130 734 190 C704 215 724 260 762 262 C734 300 754 360 804 366 C834 370 864 355 874 330Z"/>
+  </g>
+  <!-- eyes -->
+  <g>
+    <rect x="428" y="330" width="22" height="80" fill="#E4572E"/>
+    <rect x="574" y="330" width="22" height="80" fill="#E4572E"/>
+    <circle cx="439" cy="322" r="40" fill="#F2E8CF"/>
+    <circle cx="585" cy="322" r="40" fill="#F2E8CF"/>
+    <circle cx="445" cy="326" r="17" fill="#14213D"/>
+    <circle cx="591" cy="326" r="17" fill="#14213D"/>
+  </g>
+  <!-- shell -->
+  <ellipse cx="512" cy="600" rx="290" ry="210" fill="#E4572E"/>
+  <!-- agent rows -->
+  <g>
+    <rect x="318" y="500" width="388" height="52" rx="26" fill="#14213D"/>
+    <rect x="318" y="580" width="388" height="52" rx="26" fill="#14213D"/>
+    <rect x="318" y="660" width="388" height="52" rx="26" fill="#14213D"/>
+    <rect x="318" y="500" width="290" height="52" rx="26" fill="#2EC4B6"/>
+    <rect x="318" y="580" width="170" height="52" rx="26" fill="#2EC4B6"/>
+    <rect x="318" y="660" width="80" height="52" rx="26" fill="#F2E8CF"/>
+  </g>
+</svg>
