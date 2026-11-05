@@ -69,7 +69,7 @@ Nothing in this mod sends data out of your machine. Every hook is listed here, w
 
 - `session.start`: starts a one-second timer that redraws the elapsed times of running agents, and registers `/agents-pane`. It passes the event on unchanged.
 - `agent.spawn`: reads the event after the engine has handled it, to record the agent's type, label and model in memory, opens the pane when the first agent starts, and passes the result on unchanged. It never denies, rewrites or starts an agent.
-- `turn.step`, `tool.call` and `turn.complete`: read-only. They record token counts and tool names for the pane, and pass every event on unchanged.
+- `turn.step`, `tool.call` and `turn.complete`: read-only. `turn.step` reads each subagent request's token counts, and the mod also reads `session.usage` for the context window size. Neither is sent anywhere. They record token counts and tool names for the pane, and pass every event on unchanged.
 - `ui.open`, `ui.close` and the two `ui.render` hooks: draw the pane and the rows above the prompt from that in-memory list. `ui.open` and `ui.close` only react to this mod's own pane and pass the event on.
 - `command.run` for `/agents-pane`: answers only that command, with a line of text. It does not touch permissions, settings, Remote Control, other commands or files, and the plugin never registers a permission hook.
 - `$.ui.view`: called only from a key press in the pane or from `/agents-pane view` and `/agents-pane back`. It switches the main view to a subagent's transcript that Claude Code already holds in memory, and back. Nothing is read from disk or sent anywhere.
