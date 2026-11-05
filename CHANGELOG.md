@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2026-11-05
+
+- README: list what each hook reads and changes, for the plugin directory review.
+- Screenshots re-encoded smaller, without metadata.
+
 ## 1.0.0 - 2026-11-05
 
 First public release. The plugin is now named `agent-crabs` (it was `agents` in development builds).
