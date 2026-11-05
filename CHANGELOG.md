@@ -1,12 +1,8 @@
 # Changelog
 
-## 1.0.2 - 2026-11-05
-
-- README: say that `turn.step` and `session.usage` are read for the pane and nothing is sent.
-
 ## 1.0.1 - 2026-11-05
 
-- README: list what each hook reads and changes, for the plugin directory review.
+- README: list what each hook reads and changes, including the `turn.step` and `session.usage` reads, for the plugin directory review.
 - Screenshots re-encoded smaller, without metadata.
 
 ## 1.0.0 - 2026-11-05
