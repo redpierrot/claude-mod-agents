@@ -3,7 +3,7 @@ import { expect, test } from 'claude-code/testing'
 import { pickAgent, rowsModeOf } from './register'
 
 const PANE = {
-  plugin: 'agents',
+  plugin: 'agent-crabs',
   surface: 'terminal',
   component: 'Pane',
   requestId: 'agents',
@@ -37,7 +37,7 @@ test('shows an empty pane before any subagent', async ($) => {
 })
 
 const BAND = {
-  plugin: 'agents',
+  plugin: 'agent-crabs',
   surface: 'terminal',
   component: 'AbovePrompt',
   requestId: 'band',

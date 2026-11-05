@@ -1,4 +1,4 @@
-// Pure helpers for the agents mod: no engine calls, so they test without a session.
+// Pure helpers for the agent-crabs mod: no engine calls, so they test without a session.
 
 export const CRAB = '🦀'
 

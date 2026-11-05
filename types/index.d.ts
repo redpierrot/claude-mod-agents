@@ -25,7 +25,7 @@ export type AgentRec = {
 
 declare module 'claude-code' {
   interface PluginState {
-    agents: {
+    'agent-crabs': {
       list: AgentRec[]
       now: number
       paneTick: number

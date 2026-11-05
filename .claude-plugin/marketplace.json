@@ -1,5 +1,14 @@
 {
   "name": "redpierrot",
-  "owner": { "name": "Red Pierrot" },
-  "plugins": [{ "name": "agents", "source": "./" }]
+  "description": "Claude Code mods by Red Pierrot.",
+  "owner": {
+    "name": "Red Pierrot"
+  },
+  "plugins": [
+    {
+      "name": "agent-crabs",
+      "source": "./",
+      "description": "A docked pane that shows every subagent: status, context use, tokens and elapsed time."
+    }
+  ]
 }
