@@ -63,6 +63,19 @@ A mod runs inside the Claude Code process with your permissions and no sandbox. 
 - makes no network calls, registers no tools, spawns no processes, reads and writes no files;
 - registers one slash command, `/agents-pane`, and calls `$.ui.view` only from a key press or that command.
 
+### What each hook does
+
+Nothing in this mod sends data out of your machine. Every hook is listed here, with what it sees and what it changes:
+
+- `session.start`: starts a one-second timer that redraws the elapsed times of running agents, and registers `/agents-pane`. It passes the event on unchanged.
+- `agent.spawn`: reads the event after the engine has handled it, to record the agent's type, label and model in memory, opens the pane when the first agent starts, and passes the result on unchanged. It never denies, rewrites or starts an agent.
+- `turn.step`, `tool.call` and `turn.complete`: read-only. They record token counts and tool names for the pane, and pass every event on unchanged.
+- `ui.open`, `ui.close` and the two `ui.render` hooks: draw the pane and the rows above the prompt from that in-memory list. `ui.open` and `ui.close` only react to this mod's own pane and pass the event on.
+- `command.run` for `/agents-pane`: answers only that command, with a line of text. It does not touch permissions, settings, Remote Control, other commands or files, and the plugin never registers a permission hook.
+- `$.ui.view`: called only from a key press in the pane or from `/agents-pane view` and `/agents-pane back`. It switches the main view to a subagent's transcript that Claude Code already holds in memory, and back. Nothing is read from disk or sent anywhere.
+
+The mod calls no other plugin.
+
 Read `hooks/register.tsx` before you install it.
 
 ## Develop
