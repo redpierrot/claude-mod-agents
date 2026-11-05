@@ -1,7 +1,7 @@
 {
   "name": "agent-crabs",
   "displayName": "Agent Crabs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/redpierrot/claude-mod-agents",
   "repository": "https://github.com/redpierrot/claude-mod-agents",
   "description": "Subagent pane (rows above the prompt only as a fallback while the pane is not showing): a crab per agent type with model, effort, context, tokens, requests and the latest tool call; open a subagent's transcript from the pane or with /agents-pane view.",
