@@ -41,7 +41,7 @@ In a Claude Code session:
 /plugin install agent-crabs --marketplace redpierrot/claude-mod-agents
 ```
 
-Answer `y` to add the marketplace, then pick a scope. From a shell:
+Answer `y` to add the marketplace, then pick a scope. This repository is its own marketplace. The mod is not in Anthropic's plugin directory, which currently accepts mods only from Verified organizations. From a shell:
 
 ```sh
 claude plugin install agent-crabs --marketplace redpierrot/claude-mod-agents
